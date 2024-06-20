@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>Murphy的網頁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+        }
+        li {
+            margin-bottom: 15px;
+            text-align: left;
+            width: 100%;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .gender-options {
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>註冊畫面</h1>
+    <form>
+        <ul>
+            <li>姓名: <input type="text" name="name" /></li>
+            <li>帳號: <input type="text" name="account" /></li>
+            <li>密碼: <input type="password" name="password" /></li>
+            <li>信箱: <input type="email" name="email" /></li>
+            <li>電話: <input type="tel" name="phone" /></li>
+            <li>生日: <input type="date" name="birthday" /></li>
+            <li>性別:<br/>
+                <div class="gender-options">
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        男性
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        女性
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        其他
+                    </label>
+                </div>
+            </li>
+            <li>附件: <input type="file" name="attachment" /></li>
+            <li>自我介紹:<br/><textarea name="introduction"></textarea></li>
+        </ul>
+        <button type="submit">提交</button>
+    </form>
+</div>
+
+</body>
+</html>
